@@ -25,4 +25,6 @@ window.onload = function(){
   setInterval(function(){
       vid.currentTime = window.pageYOffset/1200;
   }, 180);
+
+  $('window').on('touchmove', scroll);
   };
