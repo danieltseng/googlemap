@@ -8,7 +8,7 @@
  */
 window.onload = function(){
     // your code
-    vid.defaultMuted = true;
+
     // select video element
   var vid = document.getElementById('v0');
   //var vid = $('#v0')[0]; // jquery option
