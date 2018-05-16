@@ -29,4 +29,11 @@ window.onload = function(){
   }, 180);
 
   
+  $('window').on('touchmove', function(event) {
+    //Prevent the window from being scrolled.
+    event.preventDefault();
+
+    //Do something like call window.scrollTo to mimic the scrolling
+    //request the user made.
+});
   };
