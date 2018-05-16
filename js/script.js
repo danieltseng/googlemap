@@ -23,6 +23,6 @@ window.onload = function(){
 
   // refresh video frames on interval for smoother playback
   setInterval(function(){
-      vid.currentTime = window.pageYOffset/200;
-  }, 200);
+      vid.currentTime = window.pageYOffset/1200;
+  }, 180);
   };
