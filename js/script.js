@@ -9,6 +9,8 @@
 window.onload = function(){
     // your code
 
+
+
     // select video element
   var vid = document.getElementById('v0');
   //var vid = $('#v0')[0]; // jquery option
@@ -20,12 +22,11 @@ window.onload = function(){
   window.onscroll = function(){
       vid.pause();
   };
-  
 
   // refresh video frames on interval for smoother playback
   setInterval(function(){
       vid.currentTime = window.pageYOffset/1200;
   }, 180);
 
-  $('window').on('touchmove', scroll);
+  
   };
