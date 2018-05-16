@@ -28,7 +28,6 @@ window.onload = function(){
       vid.currentTime = window.pageYOffset/1200;
   }, 180);
 
-  
   $('window').on('touchmove', function(event) {
     //Prevent the window from being scrolled.
     event.preventDefault();
@@ -36,4 +35,6 @@ window.onload = function(){
     //Do something like call window.scrollTo to mimic the scrolling
     //request the user made.
 });
+
+
   };

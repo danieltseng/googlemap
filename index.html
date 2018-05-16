@@ -26,12 +26,33 @@
 
 <body>
 
+  <video playsinline autoplay muted id="myVideo" style="  position :fixed; top :0; height: 100%;">
+    <source src="5009.mov">
+    Your browser does not support the video tag.
+  </video>
+
+  <div id="videoEnd" style="display:none">
+
+
+
   <div  id="set-height"  class="row justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" >
 
   <video playsinline autoplay loop muted id="v0"  tabindex="0" autobuffer preload >
       <source src="5009.mov"></source>
   </video>
   </div>
+
+  </div>
+
+  <script>
+       document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+      function myHandler(e) {
+          if(!e) { e = window.event; }
+          // What you want to do after the event
+          document.getElementById('myVideo').style.display="none";
+          document.getElementById('videoEnd').style.display="block";
+      }
+  </script>
 
 </body>
 
