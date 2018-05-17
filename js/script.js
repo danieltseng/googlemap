@@ -25,8 +25,8 @@ window.onload = function(){
 
   // refresh video frames on interval for smoother playback
   setInterval(function(){
-      vid.currentTime = window.pageYOffset/1200;
-  }, 180);
+      vid.currentTime = window.pageYOffset/800;
+  }, 100);
 
   $('window').on('touchmove', function(event) {
     //Prevent the window from being scrolled.
@@ -34,7 +34,7 @@ window.onload = function(){
 
     //Do something like call window.scrollTo to mimic the scrolling
     //request the user made.
-});
+   });
 
 
   };

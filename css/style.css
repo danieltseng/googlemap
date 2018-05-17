@@ -1,5 +1,8 @@
+body{
+  background-color: #000;
+}
 #set-height  {
-  height: 4130px;
+  height: 2950px;
 }
 #v0{
   position :fixed ;
