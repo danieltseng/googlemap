@@ -9,7 +9,13 @@
 window.onload = function(){
     // your code
 
-
+    document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+       if(!e) { e = window.event; }
+       // What you want to do after the event
+       document.getElementById('myVideo').style.display="none";
+       document.getElementById('videoEnd').style.display="opacity=1";
+    }
 
     // select video element
   var vid = document.getElementById('v0');
@@ -35,6 +41,7 @@ window.onload = function(){
     //Do something like call window.scrollTo to mimic the scrolling
     //request the user made.
    });
+
 
 
   };
