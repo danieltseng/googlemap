@@ -1,28 +1,542 @@
+/*
+Theme Name: coming theme
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: the Loracy
+Author URI: https://loracy.github.io
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0
+*/
 
 
-body{
-  background-color: #000;
-}
-#set-height  {
-  height: 2950px;
-}
-#v0{
-  top :0;
-  height: 100%;
-  position: fixed;
+/*
+ ---guide---
+colors:
+#34ACCA
+header: 65px
+content: pt-5 pb-5
+class naming style:
+  col -> offset -> m -> p -> component -> customized
+*/
+
+@font-face {
+    font-family: "My-Font";
+    src: url('./font/Geostencil.ttf') format('opentype');
+    src: url('./font/Geostencil.otf') format('truetype');
+    src: url('./font/Geostencil.woff') format('woff');
 }
 
-.ethos{
-  z-index: 3;
-  position: absolute;
-  top:70%;
-  left:40%;
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+    margin:0;
+
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    overflow-x:hidden;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== ScrollMagic Class ==============================================
+   Author: Petr Tichy - ihatetomatoes.net
+   ========================================================================== */
+
+/*
+body {
+    font: 16px/1.5 Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+} */
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+ ::-webkit-scrollbar {display:none}
+
+#all{
+    overflow-y:hidden;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+#begin-height{
+    width: 100%;
+}
+.main-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#main{
+
+    position: relative;
+    height:100vh;
+    width: 100%;
+    background-color: #000;
+  }
+.project {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    position: fixed;
+}
+.project.fade-in {
+    opacity: 1;
+
+}
+
+.project.fade-in-w {
+    opacity: 1;
+    transform: translateY(-75px);
+    /* transition: all 1s ease-out; */
+}
+
+.project.fade-in-w-o {
+    opacity: 0 !important;
+    transform: translateY(-50px);
+
+}
+.project.fade-in-w-o-a {
+    opacity: 0 !important;
+    transform: translateY(-150px);
+    /* transition: all 0.5s ease-in; */
+}
+
+.project img {
+    height: 100vh;
+    width: auto;
+
+}
+
+#videoEnd{
+   width: 100%;
+}
+
+#word01{
+  z-index: 11;
+  bottom:15%;
+  justify-content: center;
+}
+
+#word01 h1{
+    font-family: 'My-Font'!important;
+  font-size: 100px;
   color: #fff;
-  transition: all 2s ease-out;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+#word02{
+  z-index: 12;
+  bottom:70%;
+}
+
+#word02 h1{
+  font-size: 100px;
+  color: #fff;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.projects {
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    display: -webkit-flex;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
 }
 
 
-h1{
-  font-family: Geostencil;
-  font-size: 70px;
+#set-height  {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+  }
+
+
+
+#main2{
+    margin-top: 310px;
+}
+
+#bursh-top{
+    background-image:url("../img/ethos-brush-top.jpeg");
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    margin-top: 1650px;
+}
+.project.fade-in-b {
+    opacity: 1;
+    transition: all 1s ease-out;
+}
+
+#bursh-top-intro{
+ margin-top: -80vh;
+ position: absolute;
+ margin-left: 25%;
+
+
+}
+
+.jumping{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.jumping-top{
+    height: 50%;
+    margin: 0 10px;
+
+}
+
+.jumping-item{
+    margin: 0 20px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image:url("../img/img_project01-icon.svg");
+    background-position: center;
+}
+
+.jumping-intro{
+    height: 50%;
+    width: auto;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+.case{
+    height: 100vh;
+    width: 100%;
+}
+.case-top{
+    height: 50%;
+    text-align: center;
+}
+.case-intro{
+    height: 50%;
+    width: auto;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+
+
+.introduction{
+  z-index: 5;
+  position: relative;
+  height: 30vh;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:rgba(255, 255, 255, 0.5);
+}
+
+.introduction1{
+  z-index: 5;
+  position: relative;
+  height: 30vh;
+  width: 50%;
+  margin-left: 10%;
+  background-color:rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+}
+
+.navbar{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* =Footer */
+.footer-container {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #06060d;
+}
+.footer-container .wrapper {
+    width: 80%;
+    max-width: none;
+    margin: 0 10%;
+}
+.footer-container h3 {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: normal;
+}
+.footer-container a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media handheld{
+    html{
+        width:device-width;
+
+    }
+    #word01 h1{
+        font-size: 60px;
+        color: blue;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+      }
+}
+@media only screen and (max-width: 768px) {
+    /* =General */
+
+    #word01 h1{
+      font-size: 60px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    #word02 h1{
+      font-size: 60px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+@media only screen and (min-width: 768px) {
+    /* =General */
+
+    #word01 h1{
+      font-size: 70px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    #word02 h1{
+      font-size: 80px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+@media only screen and (min-width: 1140px) {
+    /* =General */
+
+    #word01 h1{
+      font-size: 100px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    #word02 h1{
+      font-size: 100px;
+      color: #fff;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    /* =Header */
+
+    /* =Footer */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
